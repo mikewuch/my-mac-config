@@ -40,7 +40,7 @@
  set laststatus=2                " Always show the status line
  set showcmd                     " Show the current command in the lower right corner right corner
  set showmode                    " Show the current mode
- set timeoutlen=250              " Short map keys timeout keeps the ui feeling snappy
+ set timeoutlen=450              " Short map keys timeout keeps the ui feeling snappy
  set tags=./TAGS,TAGS            " Use Emacs tagfile naming convention
  
  " Keep more context when scrolling off the end of a buffer
@@ -69,39 +69,54 @@
  nmap <leader>gb :CommandTBuffer<cr>
  nmap <leader>gf :CommandT %%<cr>
  nmap <leader>gp :CommandT public<cr>
- nmap <leader>gm :CommandT app/models<cr>
- nmap <leader>gc :CommandT app/controllers<cr>
- nmap <leader>gv :CommandT app/views<cr>
- nmap <leader>ga :CommandT app/assets<cr>
+ nmap <leader>gm :CommandT grails-app/model<cr>
+ nmap <leader>gg :CommandT grails-app/conf<cr>
+ nmap <leader>gc :CommandT grails-app/controllers<cr>
+ nmap <leader>gv :CommandT grails-app/views<cr>
+ nmap <leader>gs :CommandT grails-app/services<cr>
+ nmap <leader>gt :CommandT test<cr>
+ nmap <leader>ga :CommandT web-app<cr>
  let g:CommandTMaxHeight = 15
 
- " Edit
+ " NERDTree keymap
+ map <leader>r :NERDTreeFind<cr>
+
+ " Tabs keymap
+ " set switchbuf=usetab,newtab
+ " nnoremap <F8> :sbnext<CR>
+ " nnoremap <S-F8> :sbprevious<CR>
+ " nnoremap <C-Left> :tabprevious<CR>
+ " nnoremap <C-Right> :tabnext<CR>
+ " nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+ " nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
  " clear highlight
  nmap <silent> <leader>/ :noh<CR>
+ 
  " map tab key similar to Firefox
- map <D-S-]> gt
- map <D-S-[> gT
- map <D-1> 1gt
- map <D-2> 2gt
- map <D-3> 3gt
- map <D-4> 4gt
- map <D-5> 5gt
- map <D-6> 6gt
- map <D-7> 7gt
- map <D-8> 8gt
- map <D-9> 9gt
- map <D-0> :tablast<CR>
+ map <leader>] gt
+ map <leader>[ gT
+ map <leader>1 1gt
+ map <leader>2 2gt
+ map <leader>3 3gt
+ map <leader>4 4gt
+ map <leader>5 5gt
+ map <leader>6 6gt
+ map <leader>7 7gt
+ map <leader>8 8gt
+ map <leader>9 :tablast<CR>
 
  command! -nargs=* Wrap set wrap linebreak nolist
  
  " Bubble text
  " Bubble single lines
- " nmap <C-Up> [e
- " nmap <C-Down> ]e
+ " nmap <M-Up> [e
+ " nmap <M-Down> ]e
  " Bubble multiple lines
  " vmap <C-Up> [egv
  " vmap <C-Down> ]egv
 
+ " Vundle settings
  filetype off                   " required!
 
  set rtp+=~/.vim/bundle/vundle/

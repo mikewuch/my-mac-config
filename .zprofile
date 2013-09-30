@@ -55,6 +55,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
+alias chrome="open /Applications/Google\ Chrome.app/"
 
 # Transmission CLI 
 tsm-clearcompleted() {
