@@ -6,7 +6,8 @@
  filetype plugin indent on
  set encoding=utf-8
  set smarttab
- set noet ci pi sts=0 sw=4 ts=4
+ set noet ci pi sts=0 sw=2 ts=2
+ " set noet ci pi sts=0 sw=4 ts=4
  " set noexpandtab
  " set copyindent
  " set preserveindent
@@ -64,13 +65,13 @@
  " Command-T Plugin and File Navigation
  let mapleader = ","
  cnoremap %% <C-R>=expand('%:h').'/'<cr>
- nmap <leader>f :CommandTFlush<cr>
+ nmap <leader>gf :CommandTFlush<cr>
  nmap <leader>g :CommandT<cr>
  nmap <leader>gb :CommandTBuffer<cr>
- nmap <leader>gf :CommandT %%<cr>
+ nmap <leader>gg :CommandT %%<cr>
  nmap <leader>gp :CommandT public<cr>
  nmap <leader>gm :CommandT grails-app/model<cr>
- nmap <leader>gg :CommandT grails-app/conf<cr>
+ nmap <leader>go :CommandT grails-app/conf<cr>
  nmap <leader>gc :CommandT grails-app/controllers<cr>
  nmap <leader>gv :CommandT grails-app/views<cr>
  nmap <leader>gs :CommandT grails-app/services<cr>
@@ -80,6 +81,11 @@
 
  " NERDTree keymap
  map <leader>r :NERDTreeFind<cr>
+ map <leader>f :NERDTreeFocus<cr>
+ 
+" Commenting blocks of code.
+noremap   <silent> cc      :s,^\(\s*\)[^# \t]\@=,\1# ,e<CR>:nohls<CR>zvj
+noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
 
  " Tabs keymap
  " set switchbuf=usetab,newtab
@@ -130,20 +136,24 @@
  "
  " original repos on github
  Bundle 'tpope/vim-fugitive'
+ " quick jump to text
  Bundle 'Lokaltog/vim-easymotion'
  " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  " Bundle 'tpope/vim-rails.git'
  " vim-scripts repos
  " Bundle 'L9'
  " Bundle 'FuzzyFinder'
- 
+
+ " Commenting
+ Bundle 'tcomment'
+ " Search files
  Bundle 'git://git.wincent.com/command-t.git'
  " Grep commands
  Bundle 'epmatsw/ag.vim'  
- " Line & Block commenting
- Bundle 'tComment'  
  " Align text
  Bundle 'godlygeek/tabular' 
+ " Search text in all files within project
+ Bundle 'mileszs/ack.vim'
  " Bundle 'jgdavey/tslime.vim'
  Bundle 'scrooloose/nerdtree'
  Bundle 'msanders/snipmate.vim'

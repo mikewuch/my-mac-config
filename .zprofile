@@ -8,7 +8,8 @@ eval "$(jenv init -)"
 export PATH="/usr/local/heroku/bin:$PATH"
 # Swapping from PHP53 to PHP54
 # export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
-export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+# export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+export PATH="$HOME/.phpenv/bin:$PATH"
 
 # Pipeless
 export LESSOPEN='|/usr/local/bin/lesspipe.sh %s'
@@ -27,10 +28,12 @@ alias cdtomcat="cd /Library/Tomcat/6.0.24"
 alias cdprojects="cd /Users/mwu/Projects"
 alias cdnfs="cd /Users/mwu/Projects/ea/p4/eax-p4a_1666/NeedForSpeed.com/kosmos/ml"
 alias cdp4f="cd /Users/mwu/Projects/ea/git"
-alias cdgrails="cd /Users/mwu/Projects/grails"
 alias cdjava="cd /Users/mwu/Projects/java"
+alias cdphp="cd /Users/mwu/Projects/php"
+alias cdgrails="cd /Users/mwu/Projects/grails"
 alias cdsf2="cd /Users/mwu/Projects/sf2"
 alias cdrails="cd /Users/mwu/Projects/rails"
+alias cdjs="cd /Users/mwu/Projects/javascript"
 alias cdcg="cd /Users/mwu/Projects/caregaroo"
 alias cdcgfb="cd /Users/mwu/Projects/caregaroo/cg_fbapp"
 alias cdcgweb="cd /Users/mwu/Projects/caregaroo/cg2_app"
@@ -85,6 +88,15 @@ tsm-speed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sl
 
 # https://github.com/fagga/transmission-remote-cli
 tsm-ncurse() { transmission-remote-cli ;}
+
+# disable nyae
+DISABLE_CORRECTION="true"
+
+# Load phpbrew
+source $HOME/.phpbrew/bashrc
+
+# Load node version manager
+source ~/.nvm/nvm.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
