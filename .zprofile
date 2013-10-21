@@ -89,9 +89,6 @@ tsm-speed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sl
 # https://github.com/fagga/transmission-remote-cli
 tsm-ncurse() { transmission-remote-cli ;}
 
-# disable nyae
-DISABLE_CORRECTION="true"
-
 # Load phpbrew
 source $HOME/.phpbrew/bashrc
 

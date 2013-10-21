@@ -98,7 +98,11 @@ noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
 
  " clear highlight
  nmap <silent> <leader>/ :noh<CR>
- 
+
+ " close buffers
+ map <F3> :BufOnly<CR> "Close all other buffers but this one
+ map <F4> :BufOnly<CR>:bd <cr> "Close all buffers
+
  " map tab key similar to Firefox
  map <leader>] gt
  map <leader>[ gT
@@ -136,8 +140,14 @@ noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
  "
  " original repos on github
  Bundle 'tpope/vim-fugitive'
+ " Surround
+ Bundle 'tpope/vim-surround'
+ " Properly bubble text
+ Bundle 'tpope/vim-unimpaired'
  " quick jump to text
  Bundle 'Lokaltog/vim-easymotion'
+ " Close buffers
+ Bundle 'BufOnly.vim'
  " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
  " Bundle 'tpope/vim-rails.git'
  " vim-scripts repos
@@ -159,8 +169,6 @@ noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
  Bundle 'msanders/snipmate.vim'
  " Tab completion
  " Bundle 'ervandew/supertab' 
- " Properly bubble text
- Bundle 'tpope/vim-unimpaired'
  " Vim themes
  " Bundle 'altercation/vim-colors-solarized'
  " Bundle 'Valloric/YouCompleteMe'
