@@ -1,19 +1,23 @@
 export JAVA_HOME=/Library/Java/Home
 export HISTCONTROL=ignoredups
 
-# Added java env manager
+# Load JAVA env manager
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-# Swapping from PHP53 to PHP54
-# export PATH="$(brew --prefix josegonzalez/php/php53)/bin:$PATH"
-# export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+# Load PHP env manager
 export PATH="$HOME/.phpenv/bin:$PATH"
+
+# Load Git
+export PATH="/usr/local/bin:$PATH"
 
 # Pipeless
 export LESSOPEN='|/usr/local/bin/lesspipe.sh %s'
 export LESS='-R'
+
+# Load ACK for vim search
+export ACKRC=".ackrc"
 
 # Server configuration
 # export GRAILS_OPTS="-server -Xmx512M -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
