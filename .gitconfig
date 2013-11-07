@@ -34,4 +34,5 @@
     br = branch
     unstage = reset HEAD --
     last = log -1 HEAD
-  	graph = log --graph --pretty=oneline --abbrev-commit
+  	graph = log --oneline --decorate --all --graph
+  	graph1 = log --graph --pretty=oneline --abbrev-commit

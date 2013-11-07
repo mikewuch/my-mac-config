@@ -167,6 +167,8 @@ noremap   <silent> cu      :s,^\(\s*\)# \s\@!,\1,e<CR>:nohls<CR>zvj
  " Bundle 'jgdavey/tslime.vim'
  Bundle 'scrooloose/nerdtree'
  Bundle 'msanders/snipmate.vim'
+ " JSHint syntax checker'
+ Bundle 'Shutnik/jshint2.vim'
  " Tab completion
  " Bundle 'ervandew/supertab' 
  " Vim themes

@@ -57,11 +57,6 @@ alias c='clear'
 alias vi='vim'
 alias ls='ls -F'
 alias h='history'
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~"
 alias chrome="open /Applications/Google\ Chrome.app/"
 
 # Transmission CLI 
