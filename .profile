@@ -95,3 +95,6 @@ export PROMPT_COMMAND='echo -ne "\033]0;${PWD}\007"'
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/mwu/.gvm/bin/gvm-init.sh" ]] && source "/Users/mwu/.gvm/bin/gvm-init.sh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/Users/mwu/.jenv/bin/jenv-init.sh" ]] && source "/Users/mwu/.jenv/bin/jenv-init.sh" && source "/Users/mwu/.jenv/commands/completion.sh"

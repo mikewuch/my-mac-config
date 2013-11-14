@@ -3,7 +3,7 @@
 	email = mikewuch@gmail.com
 [core]
 	editor = /usr/bin/vim
-	excludesfile = /Users/mwu/.gitignore
+	excludesfile = /Users/mwu/.gitignore_global
 [diff]
 	tool = diffmerge
 [difftool "diffmerge"]

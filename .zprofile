@@ -1,9 +1,6 @@
-export JAVA_HOME=/Library/Java/Home
+export JAVA_HOME=/Users/mwu/.jenv/candidates/java/current
 export HISTCONTROL=ignoredups
 
-# Load JAVA env manager
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # Load PHP env manager
@@ -97,4 +94,4 @@ source ~/.nvm/nvm.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/mwu/.gvm/bin/gvm-init.sh" ]] && source "/Users/mwu/.gvm/bin/gvm-init.sh"
+# [[ -s "/Users/mwu/.gvm/bin/gvm-init.sh" ]] && source "/Users/mwu/.gvm/bin/gvm-init.sh"

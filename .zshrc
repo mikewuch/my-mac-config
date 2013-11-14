@@ -59,7 +59,7 @@ vi-mode
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/Users/mwu/.rvm/gems/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/mwu/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/bin:/usr/local/opt/php54/bin:/usr/local/heroku/bin:/Users/mwu/.jenv/shims:/Users/mwu/.jenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/mwu/.gvm/vertx/current/bin:/Users/mwu/.gvm/springboot/current/bin:/Users/mwu/.gvm/lazybones/current/bin:/Users/mwu/.gvm/groovyserv/current/bin:/Users/mwu/.gvm/groovy/current/bin:/Users/mwu/.gvm/griffon/current/bin:/Users/mwu/.gvm/grails/current/bin:/Users/mwu/.gvm/gradle/current/bin:/Users/mwu/.rvm/gems/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/mwu/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/bin:/usr/local/opt/php54/bin:/usr/local/heroku/bin:/Users/mwu/.jenv/shims:/Users/mwu/.jenv/bin
+export PATH=$PATH:/Users/mwu/.rvm/gems/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/mwu/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/bin:/usr/local/opt/php54/bin:/usr/local/heroku/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/mwu/.gvm/vertx/current/bin:/Users/mwu/.gvm/springboot/current/bin:/Users/mwu/.gvm/lazybones/current/bin:/Users/mwu/.gvm/groovyserv/current/bin:/Users/mwu/.gvm/groovy/current/bin:/Users/mwu/.gvm/griffon/current/bin:/Users/mwu/.gvm/grails/current/bin:/Users/mwu/.gvm/gradle/current/bin:/Users/mwu/.rvm/gems/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/mwu/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/mwu/.rvm/bin:/usr/local/opt/php54/bin:/usr/local/heroku/bin
 
 # key bindings
 bindkey '^a' beginning-of-line
@@ -68,3 +68,5 @@ bindkey '^R' history-incremental-search-backward
 
 source ~/perl5/perlbrew/etc/bashrc
 
+#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
+[[ -s "/Users/mwu/.jenv/bin/jenv-init.sh" ]] && source "/Users/mwu/.jenv/bin/jenv-init.sh" && source "/Users/mwu/.jenv/commands/completion.sh"
